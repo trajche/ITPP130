@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+# The end-to-end test needs cupsfilter and Ghostscript; CI runs it separately.
+override_dh_auto_test:

@@ -1,0 +1,16 @@
+Source: munbyn-itpp130-cups
+Section: misc
+Priority: optional
+Maintainer: trajche <trajche@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13), libcups2-dev, libcupsimage2-dev, cups-ppdc
+Standards-Version: 4.7.0
+Homepage: https://github.com/trajche/ITPP130
+Rules-Requires-Root: no
+
+Package: munbyn-itpp130-cups
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, cups
+Description: CUPS driver for MUNBYN ITPP130 thermal label printers
+ Open source CUPS filter and PPD for the MUNBYN ITPP130 4-inch thermal
+ label printer. The filter converts CUPS raster into TSPL, the printer's
+ native command language.
