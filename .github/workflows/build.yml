@@ -39,7 +39,7 @@ jobs:
       - name: Validate PPD
         run: |
           make install
-          cupstestppd -W translations -W sizes -W filename /usr/share/ppd/munbyn/munbyn-itpp130.ppd
+          cupstestppd -W translations -W sizes -I filename /usr/share/ppd/munbyn/munbyn-itpp130.ppd
 
       - name: Build .deb
         run: |
