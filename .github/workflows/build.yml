@@ -43,11 +43,11 @@ jobs:
 
       - name: Build .deb
         run: |
-          dpkg-buildpackage -us -uc -b
+          DEB_BUILD_OPTIONS=noddebs dpkg-buildpackage -us -uc -b
           mkdir dist
           mv ../*.deb dist/
-          dpkg-deb --info dist/*.deb
-          dpkg-deb --contents dist/*.deb
+          dpkg-deb --info dist/munbyn-itpp130-cups_*.deb
+          dpkg-deb --contents dist/munbyn-itpp130-cups_*.deb
 
       - uses: actions/upload-artifact@v4
         with:
